@@ -32,7 +32,7 @@ namespace MyRace
             //#
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select nazwa,data from wydarzenia",connection);
+            SqlCommand cmd1 = new SqlCommand("select nazwa from wydarzenia",connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Wydarzenia");
