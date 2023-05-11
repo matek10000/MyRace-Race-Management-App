@@ -97,5 +97,12 @@ namespace MyRace
             adapter.Update(dt);
             connection.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SignWindow okno = new SignWindow();
+            this.Visibility = Visibility.Hidden;
+            okno.Show();
+        }
     }
 }
