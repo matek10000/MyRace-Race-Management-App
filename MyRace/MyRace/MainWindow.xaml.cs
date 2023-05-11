@@ -32,7 +32,7 @@ namespace MyRace
             // Łączenie się z bazą dla tabeli "Ostatnie wyścigi"
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select nazwa, data from wydarzenia where year(data) >= '2023'",connection);
+            SqlCommand cmd1 = new SqlCommand("select Nazwa as 'Nazwa wyścigu', Data as 'Data wyścigu' from wydarzenia order by data",connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Wydarzenia");
@@ -52,7 +52,7 @@ namespace MyRace
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select imie,nazwisko,narodowosc,data_urodzenia from zawodnicy", connection);
+            SqlCommand cmd1 = new SqlCommand("select imie as Imię, nazwisko as Nazwisko ,narodowosc as Narodowość,data_urodzenia as 'Data urodzenia' from zawodnicy", connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Zawodnicy");
@@ -70,7 +70,7 @@ namespace MyRace
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select nazwa,kraj from zespoly", connection);
+            SqlCommand cmd1 = new SqlCommand("select nazwa as 'Nazwa zespołu' ,kraj as Narodowość from zespoly", connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Zespoly");
@@ -88,7 +88,7 @@ namespace MyRace
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select nazwa,branza from sponsorzy", connection);
+            SqlCommand cmd1 = new SqlCommand("select nazwa as Nazwa,branza as Branża from sponsorzy", connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Sponsorzy");
