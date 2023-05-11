@@ -22,5 +22,15 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="10,10,0,21" Width="235" Grid.ColumnSpan="2">MyRace</Label>
+        <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="54,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5"/>
+        <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="54,54,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5"/>
+        <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="54,108,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5" Grid.RowSpan="2"/>
+        <DatePicker Grid.Column="3" HorizontalAlignment="Left" Margin="54,54,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="160"/>
+        <Label Grid.Column="3" Grid.Row="0" FontFamily="Impact" FontSize="30px" Margin="60,25,64,6" Width="149" Content="Zapisz sie!"/>
+        <Label Grid.Column="2" Grid.Row="0" FontFamily="Impact" FontSize="30px" Margin="180,95,219,67" Content="Imię:" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="121,40,219,13" Content="Nazwisko:" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="185,93,219,67" Content="Kraj:" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="2" FontFamily="Impact" FontSize="30px" Margin="52,40,224,13" Content="Data urodzenia:" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>

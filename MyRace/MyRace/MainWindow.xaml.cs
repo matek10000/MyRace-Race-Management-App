@@ -98,6 +98,7 @@ namespace MyRace
             connection.Close();
         }
 
+        // Przeniesienie na nowe okno "Zapisanie się"
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SignWindow okno = new SignWindow();
