@@ -21,16 +21,16 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="153,73,0,0" Grid.RowSpan="2" Grid.Column="2" Height="47" Width="233" Grid.ColumnSpan="2">Najblizsze wyscigi</Label>
+        <Label Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,71,0,0" Grid.RowSpan="2" Grid.Column="2" Height="47" Width="286" Grid.ColumnSpan="2" Content="Nadchodzące wyścigi"/>
         <Label Grid.Column="1" Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="10,10,0,21" Width="235" Grid.ColumnSpan="2">MyRace</Label>
-        <Label Grid.Column="4" Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,68,0,0" Grid.RowSpan="2" Height="47" Width="146">Informacje</Label>
+        <Label Grid.Column="4" Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,66,0,0" Grid.RowSpan="2" Height="47" Width="146">Informacje</Label>
         <Button Grid.Column="2" Grid.Row="3" Background="Darkgray" FontFamily="Impact" FontSize="40px" Margin="160,0,109,40" Grid.ColumnSpan="2">ZAPISZ SIĘ!</Button>
-        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=7}" Grid.RowSpan="2" Margin="79,9,42,32" Background="#FF8E8E8E" BorderThickness="1,1,1,1" Grid.Column="2">
+        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=7}" Grid.RowSpan="2" Margin="79,9,42,32" Background="#FF8E8E8E" BorderThickness="1,1,1,1" Grid.Column="2" IsReadOnly="true">
         </DataGrid>
         <Button x:Name="zawodnicy_but" Grid.Column="4" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="5,4,175,69" Click="zawodnicy_but_Click">Zawodnicy</Button>
         <Button x:Name="zespoly_but" Grid.Column="4" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="85,4,94,69" Click="zespoly_but_Click">Zespoły</Button>
         <Button x:Name="sponsorzy_but" Grid.Column="4" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="166,4,5,69" Click="sponsorzy_but_Click">Sponsorzy</Button>
-        <DataGrid x:Name="infogrid" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,57,5,10" Grid.RowSpan="3" Background="#FF8E8E8E">
+        <DataGrid x:Name="infogrid" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,57,5,10" Grid.RowSpan="3" Background="#FF8E8E8E" IsReadOnly="true">
             <DataGrid.Effect>
                 <DropShadowEffect/>
             </DataGrid.Effect>
