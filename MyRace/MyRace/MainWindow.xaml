@@ -24,11 +24,11 @@
         <Label Grid.Column="2" Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Center" Margin="0,19,0,12" Width="235">MyRace</Label>
         <Label Grid.Column="3" Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,68,0,0" Grid.RowSpan="2" Height="47" Width="146">Informacje</Label>
         <Button Grid.Column="2" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="40px" Margin="26,75,26,75" Grid.RowSpan="2">ZAPISZ SIĘ!</Button>
-        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=3}" Grid.RowSpan="3" Margin="10,10,10,10" Background="#FFC1C1C1"/>
-        <Button x:Name="zawodnicy_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="5,4,175,69">Zawodnicy</Button>
-        <Button x:Name="zespoly_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="85,4,94,69">Zespoły</Button>
-        <Button x:Name="sponsorzy_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="166,4,5,69">Sponsorzy</Button>
-        <DataGrid x:Name="infogrid" Grid.Column="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,57,5,10" Grid.RowSpan="3"/>
+        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=3}" Grid.RowSpan="3" Margin="10,10,10,10" Background="#FF8E8E8E"/>
+        <Button x:Name="zawodnicy_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="5,4,175,69" Click="zawodnicy_but_Click">Zawodnicy</Button>
+        <Button x:Name="zespoly_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="85,4,94,69" Click="zespoly_but_Click">Zespoły</Button>
+        <Button x:Name="sponsorzy_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="15px" Margin="166,4,5,69" Click="sponsorzy_but_Click">Sponsorzy</Button>
+        <DataGrid x:Name="infogrid" Grid.Column="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,57,5,10" Grid.RowSpan="3" Background="#FF8E8E8E"/>
 
     </Grid>
 

@@ -29,15 +29,71 @@ namespace MyRace
             string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
             SqlConnection connection = new SqlConnection(conn);
 
-            //#
+            // Łączenie się z bazą dla tabeli "Ostatnie wyścigi"
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select nazwa from wydarzenia",connection);
+            SqlCommand cmd1 = new SqlCommand("select nazwa, data from wydarzenia where year(data) >= '2023'",connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Wydarzenia");
             adapter.Fill(dt);
             najblizszew.ItemsSource = dt.DefaultView;
+            adapter.Update(dt);
+            connection.Close();
+
+
+        }
+
+        // Łączenie się z bazą po kliknięciu "Informacje o zawodnikach"
+
+        private void zawodnicy_but_Click(object sender, RoutedEventArgs e)
+        {
+            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            SqlConnection connection = new SqlConnection(conn);
+
+            connection.Open();
+            SqlCommand cmd1 = new SqlCommand("select imie,nazwisko,narodowosc,data_urodzenia from zawodnicy", connection);
+            cmd1.ExecuteNonQuery();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable("Zawodnicy");
+            adapter.Fill(dt);
+            infogrid.ItemsSource = dt.DefaultView;
+            adapter.Update(dt);
+            connection.Close();
+        }
+
+        // Łączenie się z bazą po kliknięciu "Informacje o zespołach"
+
+        private void zespoly_but_Click(object sender, RoutedEventArgs e)
+        {
+            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            SqlConnection connection = new SqlConnection(conn);
+
+            connection.Open();
+            SqlCommand cmd1 = new SqlCommand("select nazwa,kraj from zespoly", connection);
+            cmd1.ExecuteNonQuery();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable("Zespoly");
+            adapter.Fill(dt);
+            infogrid.ItemsSource = dt.DefaultView;
+            adapter.Update(dt);
+            connection.Close();
+        }
+
+        // Łączenie z bazą po kliknięciu "Informacje o sponsorach"
+
+        private void sponsorzy_but_Click(object sender, RoutedEventArgs e)
+        {
+            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            SqlConnection connection = new SqlConnection(conn);
+
+            connection.Open();
+            SqlCommand cmd1 = new SqlCommand("select nazwa,branza from sponsorzy", connection);
+            cmd1.ExecuteNonQuery();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable("Sponsorzy");
+            adapter.Fill(dt);
+            infogrid.ItemsSource = dt.DefaultView;
             adapter.Update(dt);
             connection.Close();
         }
