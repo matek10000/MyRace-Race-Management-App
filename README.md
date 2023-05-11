@@ -11,3 +11,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.3
 >Zaprojektowanie strony do zapisywania się. Poprawienie designu, czcionek oraz rozmieszczenia tabeli
+
+#v0.4
+>Poprawienie designu i funkcjonalności strony początkowej. Poprawienie designu strony do zapisów.
