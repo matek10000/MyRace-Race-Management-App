@@ -26,8 +26,9 @@ namespace MyRace
         public MainWindow()
         {
             InitializeComponent();
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Database.mdf;Integrated Security=True;Connect Timeout=30;";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
+
 
             // Łączenie się z bazą dla tabeli "Ostatnie wyścigi"
 
@@ -48,7 +49,7 @@ namespace MyRace
 
         private void zawodnicy_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
@@ -66,7 +67,7 @@ namespace MyRace
 
         private void zespoly_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
@@ -84,7 +85,7 @@ namespace MyRace
 
         private void sponsorzy_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
