@@ -14,3 +14,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.4
 >Poprawienie designu i funkcjonalności strony początkowej. Poprawienie designu strony do zapisów.
+
+#v0.5
+>Wprowadzenie działającej względnej ścieżki LocalDB.
