@@ -26,7 +26,7 @@ namespace MyRace
         public MainWindow()
         {
             InitializeComponent();
-            string conn = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Wyscig;Integrated Security=True;";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Database.mdf;Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             // Łączenie się z bazą dla tabeli "Ostatnie wyścigi"
