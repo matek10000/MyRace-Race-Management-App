@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace MyRace
 {
@@ -26,10 +29,13 @@ namespace MyRace
         public MainWindow()
         {
             InitializeComponent();
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
+            string databaseFileName = "Baza.mdf";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+            string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
+
+            string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
-
-
             // Łączenie się z bazą dla tabeli "Ostatnie wyścigi"
 
             connection.Open();
@@ -49,7 +55,12 @@ namespace MyRace
 
         private void zawodnicy_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
+            string databaseFileName = "Baza.mdf";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+            string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
+
+            string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
@@ -67,7 +78,12 @@ namespace MyRace
 
         private void zespoly_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
+            string databaseFileName = "Baza.mdf";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+            string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
+
+            string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
@@ -85,7 +101,12 @@ namespace MyRace
 
         private void sponsorzy_but_Click(object sender, RoutedEventArgs e)
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\CSHARP\\MyRaceWPF\\MyRace\\MyRace\\Baza.mdf;Integrated Security=True;Connect Timeout=30;";
+            string databaseFileName = "Baza.mdf";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+            string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
+
+            string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
