@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyRace"
         mc:Ignorable="d"
-        Title="MyRace v0.5" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MyRace v0.6" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFC3C2C2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"></ColumnDefinition>

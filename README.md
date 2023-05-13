@@ -17,3 +17,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.5
 >Wprowadzenie działającej względnej ścieżki LocalDB.
+
+#v0.6
+>Wprowadzenie działającego formularzu zapisywania się do bazy danych.
