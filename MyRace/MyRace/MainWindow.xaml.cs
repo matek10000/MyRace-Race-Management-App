@@ -63,7 +63,7 @@ namespace MyRace
             SqlConnection connection = new SqlConnection(conn);
 
             connection.Open();
-            SqlCommand cmd1 = new SqlCommand("select imie as Imię, nazwisko as Nazwisko ,narodowosc as Narodowość,data_urodzenia as 'Data urodzenia' from zawodnicy", connection);
+            SqlCommand cmd1 = new SqlCommand("select imie as Imię, nazwisko as Nazwisko ,narodowosc as Narodowość,data_urodzenia as 'Data urodzenia' from zawodnicy order by IDzawodnik DESC", connection);
             cmd1.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable("Zawodnicy");

@@ -62,7 +62,10 @@ namespace MyRace
 
             if (a == 1)
             {
-                MessageBox.Show("Zostałeś pomyślnie dodany do bazy danych wyścigów!");
+                MessageBox.Show($"Zawodnik {imie.Text} {nazwisko.Text} został pomyślnie dodany do listy zawodników!");
+                MainWindow okno = new MainWindow();
+                this.Visibility = Visibility.Hidden;
+                okno.Show();
             }
         }
     }
