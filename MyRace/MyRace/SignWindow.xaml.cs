@@ -23,5 +23,12 @@ namespace MyRace
         {
             InitializeComponent();
         }
+
+        private void back_but_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow okno = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            okno.Show();
+        }
     }
 }

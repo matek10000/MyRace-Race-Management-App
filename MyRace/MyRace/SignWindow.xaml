@@ -56,6 +56,11 @@
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
+        <Button x:Name="back_but" Grid.Column="1" FontFamily="Impact" FontSize="30px" Content="Powrót" HorizontalAlignment="Left" Height="45" Grid.Row="3" VerticalAlignment="Top" Width="118" Grid.ColumnSpan="2" Margin="16,46,0,0" Click="back_but_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>
