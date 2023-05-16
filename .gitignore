@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /MyRace/MyRace/Baza_log.ldf
+/MyRace/MyRace/Baza.mdf
