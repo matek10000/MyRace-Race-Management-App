@@ -52,13 +52,13 @@ namespace MyRace
 
                 if(dataTable.Rows.Count > 0 )
                 {
-                    MessageBox.Show("Udało się!");
+                    MessageBox.Show("Zostałeś pomyślnie zalogowany!\nNastąpi przeniesienie do panelu użytkownika..","Pomyślnie zalogowano");
                     connection.Close();
                     nickname = login.Text;
                 }
                 else
                 {
-                    MessageBox.Show("Nieprawidłowy login lub hasło!!","BŁĄD LOGOWANIA",MessageBoxButton.OK,MessageBoxImage.Error);
+                    MessageBox.Show("Nieprawidłowy login lub hasło!","Błąd logowania",MessageBoxButton.OK,MessageBoxImage.Error);
                     connection.Close();
                 }
         }

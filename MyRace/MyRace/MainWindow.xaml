@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyRace"
         mc:Ignorable="d"
-        Title="MyRace v0.7" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FFC3C2C2">
+        Title="MyRace v0.8" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity="0"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/main_bg.png" Stretch="None" TileMode="None"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"></ColumnDefinition>
             <ColumnDefinition Width="57*"/>
@@ -24,22 +30,47 @@
         <Label Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,83,0,0" Grid.RowSpan="2" Grid.Column="2" Height="47" Width="286" Grid.ColumnSpan="2" Content="Nadchodzące wyścigi"/>
         <Label Grid.Column="3" Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="10,-4,0,36" Width="236">MyRace</Label>
         <Label Grid.Column="4" Grid.Row="0" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,83,0,0" Grid.RowSpan="2" Height="47" Width="146">Informacje</Label>
-        <Button x:Name="signin_but" Grid.Column="2" Grid.Row="3" Background="Darkgray" FontFamily="Impact" FontSize="30px" Margin="84,20,228,39" Grid.ColumnSpan="2" Click="signin_but_Click">
+        <Button x:Name="signin_but" Grid.Column="2" Grid.Row="3" FontFamily="Impact" FontSize="30px" Margin="84,20,228,39" Grid.ColumnSpan="2" Click="signin_but_Click">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect> ZAPISZ SIĘ!
         </Button>
-        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=7}" Grid.RowSpan="3" Margin="29,21,116,108" Background="#FF8E8E8E" BorderThickness="1,1,1,1" Grid.Column="1" IsReadOnly="true">
+        <DataGrid x:Name="najblizszew" Grid.ColumnSpan="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=7}" Grid.RowSpan="3" Margin="29,21,116,108" BorderThickness="1,1,1,1" Grid.Column="1" IsReadOnly="true">
+            <DataGrid.Background>
+                <SolidColorBrush Color="#FF8E8E8E" Opacity="0.4"/>
+            </DataGrid.Background>
         </DataGrid>
-        <Button x:Name="zawodnicy_but" Grid.Column="3" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="13px" Margin="251,17,202,54" Click="zawodnicy_but_Click" Grid.ColumnSpan="2">Zawodnicy</Button>
-        <Button x:Name="zespoly_but" Grid.Column="4" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="13px" Margin="58,17,121,54" Click="zespoly_but_Click">Zespoły</Button>
-        <Button x:Name="sponsorzy_but" Grid.Column="4" Grid.Row="1" Background="Darkgray" FontFamily="Impact" FontSize="13px" Margin="139,17,32,54" Click="sponsorzy_but_Click">Sponsorzy</Button>
-        <DataGrid x:Name="infogrid" Grid.Column="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="251,57,32,10" Grid.RowSpan="3" Background="#FF8E8E8E" IsReadOnly="true" Grid.ColumnSpan="2">
+        <Button x:Name="zawodnicy_but" Grid.Column="3" Grid.Row="1" FontFamily="Impact" FontSize="13px" Margin="251,17,202,54" Click="zawodnicy_but_Click" Grid.ColumnSpan="2">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.75"/>
+            </Button.Background> Zawodnicy
+        </Button>
+        <Button x:Name="zespoly_but" Grid.Column="4" Grid.Row="1" FontFamily="Impact" FontSize="13px" Margin="58,17,121,54" Click="zespoly_but_Click">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.75"/>
+            </Button.Background> Zespoły
+        </Button>
+        <Button x:Name="sponsorzy_but" Grid.Column="4" Grid.Row="1" FontFamily="Impact" FontSize="13px" Margin="139,17,32,54" Click="sponsorzy_but_Click">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.75"/>
+            </Button.Background> Sponsorzy
+        </Button>
+        <DataGrid x:Name="infogrid" Grid.Column="3" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="251,57,32,10" Grid.RowSpan="3" IsReadOnly="true" Grid.ColumnSpan="2">
+            <DataGrid.Background>
+                <SolidColorBrush Color="#FF8E8E8E" Opacity="0.4"/>
+            </DataGrid.Background>
             <DataGrid.Effect>
                 <DropShadowEffect/>
             </DataGrid.Effect>
         </DataGrid>
-        <Button x:Name="login_but" Grid.Column="1" Background="Darkgray" FontFamily="Impact" FontSize="20px" Margin="10,10,152,50" Grid.ColumnSpan="2" Content="Zaloguj się" Click="login_but_Click"/>
+        <Button x:Name="login_but" Grid.Column="1" FontFamily="Impact" FontSize="20px" Margin="10,10,152,50" Grid.ColumnSpan="2" Content="Zaloguj się" Click="login_but_Click">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

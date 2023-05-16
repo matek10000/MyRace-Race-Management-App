@@ -23,3 +23,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.7
 >Wprowadzenie działającego formularza do logowania się. Poprawki designu.
+
+#v0.8
+>Wprowadzenie dużych zmian front-endowych w tym zmiana całego tła. Poprawienie komunikatów podczas zapisu i logowania. Wprowadzenie widełek do zapisu.
