@@ -22,7 +22,12 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Column="1" Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="10,10,0,21" Width="235" Grid.ColumnSpan="2">MyRace</Label>
-        <TextBox x:Name="imie" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="205,45,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5" Grid.ColumnSpan="2">
+        <TextBox x:Name="login" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="205,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="imie" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="205,44,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Opacity="0.5" Grid.ColumnSpan="2">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -42,8 +47,8 @@
                 <DropShadowEffect/>
             </DatePicker.Effect>
         </DatePicker>
-        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="117,32,10,21" Content="Imię:"/>
-        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="58,83,10,78" Content="Nazwisko:" Grid.RowSpan="2"/>
+        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="117,30,10,23" Content="Imię:"/>
+        <Label Grid.Column="2" Grid.Row="1" FontFamily="Impact" FontSize="30px" Margin="58,80,10,81" Content="Nazwisko:" Grid.RowSpan="2"/>
         <Label Grid.Column="2" Grid.Row="2" FontFamily="Impact" FontSize="30px" Margin="122,30,10,30" Content="Kraj:"/>
         <Label Grid.Column="1" Grid.Row="2" FontFamily="Impact" FontSize="30px" Margin="46,85,15,77" Content="Data urodzenia:" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Button x:Name="sign_but" Grid.Column="3" FontFamily="Impact" FontSize="30px" Content="Zapisz mnie!" HorizontalAlignment="Left" Height="68" Grid.Row="2" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" Margin="236,99,0,0" Grid.RowSpan="2" Click="sign_but_Click">
@@ -61,6 +66,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Label Grid.Column="2" FontFamily="Impact" FontSize="30px" Margin="108,88,19,73" Content="Login:" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

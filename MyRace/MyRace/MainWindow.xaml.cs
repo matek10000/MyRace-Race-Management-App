@@ -120,9 +120,16 @@ namespace MyRace
         }
 
         // Przeniesienie na nowe okno "Zapisanie się"
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void signin_but_Click(object sender, RoutedEventArgs e)
         {
             SignWindow okno = new SignWindow();
+            this.Visibility = Visibility.Hidden;
+            okno.Show();
+        }
+
+        private void login_but_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow okno = new LoginWindow();
             this.Visibility = Visibility.Hidden;
             okno.Show();
         }

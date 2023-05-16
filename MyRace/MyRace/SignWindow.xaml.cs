@@ -53,17 +53,18 @@ namespace MyRace
             string[] dataur1 = data_ur.Text.Split(".");
             string dataur2 = dataur1[2] + "-" + dataur1[1] + "-" + dataur1[0];
 
-            SqlCommand cmd1 = new SqlCommand("INSERT INTO Zawodnicy (Imie, Nazwisko, Narodowosc, data_urodzenia) VALUES (@Imie, @Nazwisko, @Narodowosc, @DataUrodzenia)", connection);
+            SqlCommand cmd1 = new SqlCommand("INSERT INTO Zawodnicy (Imie, Nazwisko, Narodowosc, data_urodzenia, login, haslo) VALUES (@Imie, @Nazwisko, @Narodowosc, @DataUrodzenia, @Login, 'password')", connection);
             cmd1.Parameters.AddWithValue("@Imie", imie.Text);
             cmd1.Parameters.AddWithValue("@Nazwisko", nazwisko.Text);
             cmd1.Parameters.AddWithValue("@Narodowosc", kraj.Text);
             cmd1.Parameters.AddWithValue("@DataUrodzenia", DateTime.ParseExact(dataur2, "yyyy-MM-dd", CultureInfo.InvariantCulture));
+            cmd1.Parameters.AddWithValue("@Login", login.Text);
             int a = cmd1.ExecuteNonQuery();
 
             if (a == 1)
             {
                 MessageBox.Show($"Zawodnik {imie.Text} {nazwisko.Text} został pomyślnie dodany do listy zawodników!");
-                MainWindow okno = new MainWindow();
+                LoginWindow okno = new LoginWindow();
                 this.Visibility = Visibility.Hidden;
                 okno.Show();
             }
