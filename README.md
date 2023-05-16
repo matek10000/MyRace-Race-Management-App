@@ -20,3 +20,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.6
 >Wprowadzenie działającego formularzu zapisywania się do bazy danych.
+
+#v0.7
+>Wprowadzenie działającego formularza do logowania się. Poprawki designu.
