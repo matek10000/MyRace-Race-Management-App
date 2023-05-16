@@ -34,8 +34,8 @@ namespace MyRace
         private void back_but_Click(object sender, RoutedEventArgs e)
         {
             MainWindow okno = new MainWindow();
-            this.Visibility = Visibility.Hidden;
             okno.Show();
+            this.Close();
         }
 
         private void sign_but_Click(object sender, RoutedEventArgs e)
@@ -65,8 +65,8 @@ namespace MyRace
             {
                 MessageBox.Show($"Zawodnik {imie.Text} {nazwisko.Text} został pomyślnie dodany do listy zawodników!");
                 LoginWindow okno = new LoginWindow();
-                this.Visibility = Visibility.Hidden;
                 okno.Show();
+                this.Close();
             }
         }
     }

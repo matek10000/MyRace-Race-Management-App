@@ -25,11 +25,11 @@
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox x:Name="haslo" FontSize="28px" Grid.Column="1" HorizontalAlignment="Center" Height="49" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Opacity="0.5" Grid.Row="2" Margin="0,31,0,0">
-            <TextBox.Effect>
+        <PasswordBox x:Name="haslo" FontSize="28px" Grid.Column="1" HorizontalAlignment="Center" Height="49" Password="" VerticalAlignment="Top" Width="200" Opacity="0.5" Grid.Row="2" Margin="0,31,0,0">
+            <PasswordBox.Effect>
                 <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
+            </PasswordBox.Effect>
+        </PasswordBox>
         <Label Grid.Column="1" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" Height="47" Width="84" Content="Login" VerticalAlignment="Top" Margin="28,19,0,0" Grid.Row="1"/>
         <Label Grid.Column="1" FontFamily="Impact" FontSize="30px" HorizontalAlignment="Left" Height="47" Width="84" Content="Hasło" VerticalAlignment="Top" Grid.Row="2" Margin="28,7,0,0"/>
         <Button x:Name="login_but" Background="Darkgray" FontFamily="Impact" FontSize="20px" Margin="78,10,78,48" Content="Zaloguj się" Grid.Column="1" Grid.Row="3" Click="login_but_Click"/>

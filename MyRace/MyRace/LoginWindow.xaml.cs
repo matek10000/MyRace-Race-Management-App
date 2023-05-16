@@ -45,7 +45,7 @@ namespace MyRace
             connection.Open();
 
 
-                SqlDataAdapter cmd = new SqlDataAdapter($"SELECT * FROM Zawodnicy WHERE login = '{login.Text}' AND haslo = '{haslo.Text}'", connection);
+                SqlDataAdapter cmd = new SqlDataAdapter($"SELECT * FROM Zawodnicy WHERE login = '{login.Text}' AND haslo = '{haslo.Password}'", connection);
 
                 DataTable dataTable= new DataTable();
                 cmd.Fill(dataTable);
@@ -66,8 +66,8 @@ namespace MyRace
         private void back_but_Click(object sender, RoutedEventArgs e)
         {
             MainWindow okno = new MainWindow();
-            this.Visibility = Visibility.Hidden;
             okno.Show();
+            this.Close();   
         }
     }
 }

@@ -123,15 +123,15 @@ namespace MyRace
         private void signin_but_Click(object sender, RoutedEventArgs e)
         {
             SignWindow okno = new SignWindow();
-            this.Visibility = Visibility.Hidden;
             okno.Show();
+            this.Close();
         }
 
         private void login_but_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow okno = new LoginWindow();
-            this.Visibility = Visibility.Hidden;
             okno.Show();
+            this.Close();
         }
     }
 }
