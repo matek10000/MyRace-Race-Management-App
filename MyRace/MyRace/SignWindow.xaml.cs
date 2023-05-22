@@ -51,7 +51,7 @@ namespace MyRace
 
             string[] dataur1 = data_ur.Text.Split(".");
             string dataur2 = dataur1[2] + "-" + dataur1[1] + "-" + dataur1[0];
-            DateTime dataur3 = new DateTime(Convert.ToInt16(dataur1[0]), Convert.ToInt16(dataur1[1]), Convert.ToInt16(dataur1[2]));
+            DateTime dataur3 = new DateTime(Convert.ToInt16(dataur1[2]), Convert.ToInt16(dataur1[1]), Convert.ToInt16(dataur1[0]));
 
             if (imie.Text == string.Empty || nazwisko.Text == string.Empty || kraj.Text == string.Empty)
             {
@@ -67,7 +67,7 @@ namespace MyRace
                 okno.Show();
                 this.Close();
             }
-            else if (data_ur.Text == string.Empty || (DateTime.Now.Year - dataur3.Year >= 16))
+            else if (data_ur.Text == string.Empty || (DateTime.Now.Year - dataur3.Year <= 16))
             {
                 MessageBox.Show("Data urodzenia została wprowadzona nieprawidłowo!", "Błąd", MessageBoxButton.OK);
                 SignWindow okno = new SignWindow();

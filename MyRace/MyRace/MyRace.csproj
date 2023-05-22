@@ -14,6 +14,7 @@
     <None Remove="login_bgimage.png" />
     <None Remove="main_bg.png" />
     <None Remove="main_bgimage.png" />
+    <None Remove="panel_bg.png" />
     <None Remove="profile.png" />
     <None Remove="signin_bgimage.png" />
     <None Remove="sign_bg.png" />
@@ -32,6 +33,7 @@
     <Resource Include="login_bgimage.png" />
     <Resource Include="main_bg.png" />
     <Resource Include="main_bgimage.png" />
+    <Resource Include="panel_bg.png" />
     <Resource Include="profile.png" />
     <Resource Include="signin_bgimage.png" />
     <Resource Include="sign_bg.png" />

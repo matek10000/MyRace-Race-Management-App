@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MyRace v0.8" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/panel_bg.png"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -19,7 +22,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="10,10,0,108" Width="236" Grid.RowSpan="2">MyRace</Label>
+        <Label Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="21,29,0,89" Width="236" Grid.RowSpan="2">MyRace</Label>
         <Image HorizontalAlignment="Left" Height="194" Margin="71,57,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.497,0.51" Source="/profile.png" Grid.Column="2" Grid.RowSpan="3">
             <Image.Effect>
                 <DropShadowEffect/>
@@ -32,19 +35,29 @@
             </Button.Background>
         </Button>
 
-        <Label x:Name="new_password_text" FontFamily="Impact" FontSize="15px" Margin="69,70,10,0" Content="Wprowadź nowe hasło!" Grid.Column="2" Grid.Row="2" Height="39" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <TextBox x:Name="new_password" FontSize="15px" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="32,0,0,0" Grid.Column="2" Grid.Row="3">
+        <Label x:Name="new_password_text" FontFamily="Impact" FontSize="15px" Margin="32,93,47,0" Content="Wprowadź nowe hasło!" Grid.Column="2" Grid.Row="2" Height="39" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <TextBox x:Name="new_password" FontSize="15px" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="32,23,0,0" Grid.Column="2" Grid.Row="3">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <Button x:Name="new_password_but" FontFamily="Impact" FontSize="10px" Margin="162,1,21,81" Content="Potwierdź" Click="new_password_but_Click" Grid.Column="2" Grid.Row="3">
+        <Button x:Name="new_password_but" FontFamily="Impact" FontSize="15px" Margin="162,23,21,58" Content="Potwierdź" Click="new_password_but_Click" Grid.Column="2" Grid.Row="3">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
         <Label x:Name="helper" Content="" HorizontalAlignment="Left" Height="30" Margin="39,12,0,0" Grid.Row="3" VerticalAlignment="Top" Width="108"/>
-        <Button x:Name="logout_but" FontFamily="Impact" FontSize="15px" Margin="34,42,134,25" Content="Wyloguj się" Click="logout_but_Click" Grid.Row="3">
+        <Button x:Name="logout_but" FontFamily="Impact" FontSize="15px" Margin="29,42,139,25" Content="Wyloguj się" Click="logout_but_Click" Grid.Row="3">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="team_but" FontFamily="Impact" FontSize="20px" Margin="64,53,75,10" Content="Dodaj zespół" Grid.Row="1">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="car_but" FontFamily="Impact" FontSize="16px" Margin="70,42,70,24" Content="Dodaj samochód" Grid.Row="2">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
