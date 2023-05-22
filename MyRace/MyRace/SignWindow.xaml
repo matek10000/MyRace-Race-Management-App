@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyRace"
         mc:Ignorable="d"
-        Title="MyRace v0.8" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MyRace v0.8" Height="450" Width="800" Icon="resources/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/sign_bg.png"/>
+            <ImageBrush ImageSource="resources/sign_bg.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"></ColumnDefinition>
@@ -62,7 +62,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Image Grid.Column="3" HorizontalAlignment="Left" Height="250" Margin="223,28,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.497,0.51" Grid.ColumnSpan="2" Source="/profile.png">
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="250" Margin="223,28,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.497,0.51" Grid.ColumnSpan="2" Source="resources/profile.png">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>

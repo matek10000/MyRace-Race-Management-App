@@ -92,7 +92,7 @@ namespace MyRace
 
         private void logout_but_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Pomyślnie wylogowano!", "Sukces!", MessageBoxButton.OK);
+            MessageBox.Show($"Pomyślnie wylogowano!", "Sukces!", MessageBoxButton.OK,MessageBoxImage.Information);
             LoginWindow okno = new LoginWindow();
             okno.Show();
             this.Close();

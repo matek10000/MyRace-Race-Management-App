@@ -8,17 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="bgimage.png" />
     <None Remove="icon.ico" />
     <None Remove="login_bg.png" />
-    <None Remove="login_bgimage.png" />
     <None Remove="main_bg.png" />
-    <None Remove="main_bgimage.png" />
     <None Remove="panel_bg.png" />
     <None Remove="profile.png" />
-    <None Remove="signin_bgimage.png" />
     <None Remove="sign_bg.png" />
-    <None Remove="sign_bgimage.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,17 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="bgimage.png" />
-    <Resource Include="icon.ico" />
-    <Resource Include="login_bg.png" />
-    <Resource Include="login_bgimage.png" />
-    <Resource Include="main_bg.png" />
-    <Resource Include="main_bgimage.png" />
-    <Resource Include="panel_bg.png" />
-    <Resource Include="profile.png" />
-    <Resource Include="signin_bgimage.png" />
-    <Resource Include="sign_bg.png" />
-    <Resource Include="sign_bgimage.png" />
+    <Resource Include="resources\icon.ico" />
+    <Resource Include="resources\login_bg.png" />
+    <Resource Include="resources\main_bg.png" />
+    <Resource Include="resources\panel_bg.png" />
+    <Resource Include="resources\profile.png" />
+    <Resource Include="resources\sign_bg.png" />
   </ItemGroup>
 
 </Project>

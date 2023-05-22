@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyRace"
         mc:Ignorable="d"
-        Title="MyRace v0.8" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MyRace v0.8" Height="450" Width="800" Icon="resources/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/panel_bg.png"/>
+            <ImageBrush ImageSource="resources/panel_bg.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -23,7 +23,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" FontFamily="Magneto" FontSize="50px" HorizontalAlignment="Left" Margin="21,29,0,89" Width="236" Grid.RowSpan="2">MyRace</Label>
-        <Image HorizontalAlignment="Left" Height="194" Margin="71,57,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.497,0.51" Source="/profile.png" Grid.Column="2" Grid.RowSpan="3">
+        <Image HorizontalAlignment="Left" Height="194" Margin="71,57,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.497,0.51" Source="resources/profile.png" Grid.Column="2" Grid.RowSpan="3">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>

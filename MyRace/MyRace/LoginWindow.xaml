@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyRace"
         mc:Ignorable="d"
-        Title="MyRace v0.8" Height="450" Width="800" Icon="/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MyRace v0.8" Height="450" Width="800" Icon="resources/icon.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/login_bg.png"/>
+            <ImageBrush ImageSource="resources/login_bg.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
