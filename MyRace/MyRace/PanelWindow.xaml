@@ -44,6 +44,11 @@
             </Button.Background>
         </Button>
         <Label x:Name="helper" Content="" HorizontalAlignment="Left" Height="30" Margin="39,12,0,0" Grid.Row="3" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="logout_but" FontFamily="Impact" FontSize="15px" Margin="34,42,134,25" Content="Wyloguj się" Click="logout_but_Click" Grid.Row="3">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
 
 
 

@@ -89,5 +89,13 @@ namespace MyRace
                 }
             }
         }
+
+        private void logout_but_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Pomyślnie wylogowano!", "Sukces!", MessageBoxButton.OK);
+            LoginWindow okno = new LoginWindow();
+            okno.Show();
+            this.Close();
+        }
     }
 }
