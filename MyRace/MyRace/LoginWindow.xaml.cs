@@ -52,10 +52,12 @@ namespace MyRace
 
                 if(dataTable.Rows.Count > 0 )
                 {
-                    MessageBox.Show("Zostałeś pomyślnie zalogowany!\nNastąpi przeniesienie do panelu użytkownika..","Pomyślnie zalogowano");
                     connection.Close();
                     nickname = login.Text;
-                }
+                    PanelWindow okno = new PanelWindow(nickname);
+                    okno.Show();
+                    this.Close();
+            }
                 else
                 {
                     MessageBox.Show("Nieprawidłowy login lub hasło!","Błąd logowania",MessageBoxButton.OK,MessageBoxImage.Error);
