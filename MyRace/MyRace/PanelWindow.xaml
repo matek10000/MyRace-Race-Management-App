@@ -25,24 +25,25 @@
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Label x:Name="welcome_text" FontFamily="Impact" FontSize="20px" Margin="67,29,66,16" Content="Witaj, test!" Grid.Column="2"/>
+        <Label x:Name="welcome_text" FontFamily="Impact" FontSize="20px" Margin="67,29,10,16" Content="Witaj, test!" Grid.Column="2"/>
         <Button x:Name="change_password_but" FontFamily="Impact" FontSize="15px" Margin="87,10,62,59" Content="Zmień hasło" Click="change_password_but_Click" Grid.Column="2" Grid.Row="2">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
 
-        <Label x:Name="new_password_text" FontFamily="Impact" FontSize="15px" Margin="75,60,36,10" Content="Wprowadź nowe hasło!" Grid.Column="2" Grid.Row="2"/>
-        <TextBox x:Name="new_password" FontSize="28px" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="91,84,0,0" Grid.Column="2" Grid.RowSpan="2" Grid.Row="2">
+        <Label x:Name="new_password_text" FontFamily="Impact" FontSize="15px" Margin="69,70,10,0" Content="Wprowadź nowe hasło!" Grid.Column="2" Grid.Row="2" Height="39" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <TextBox x:Name="new_password" FontSize="15px" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="32,0,0,0" Grid.Column="2" Grid.Row="3">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <Button x:Name="new_password_but" FontFamily="Impact" FontSize="10px" Margin="110,31,71,54" Content="Potwierdź" Click="new_password_but_Click" Grid.Column="2" Grid.Row="3">
+        <Button x:Name="new_password_but" FontFamily="Impact" FontSize="10px" Margin="162,1,21,81" Content="Potwierdź" Click="new_password_but_Click" Grid.Column="2" Grid.Row="3">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
+        <Label x:Name="helper" Content="" HorizontalAlignment="Left" Height="30" Margin="39,12,0,0" Grid.Row="3" VerticalAlignment="Top" Width="108"/>
 
 
 

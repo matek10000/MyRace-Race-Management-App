@@ -97,9 +97,14 @@ namespace MyRace
                 if (a == 1)
                 {
                     MessageBox.Show($"Zawodnik {imie.Text} {nazwisko.Text} został pomyślnie dodany do listy zawodników!");
+                    connection.Close();
                     LoginWindow okno = new LoginWindow();
                     okno.Show();
                     this.Close();
+                }
+                else
+                {
+                    connection.Close();
                 }
             }
         }
