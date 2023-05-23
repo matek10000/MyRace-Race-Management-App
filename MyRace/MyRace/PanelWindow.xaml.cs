@@ -26,13 +26,31 @@ namespace MyRace
         public PanelWindow(string nickname)
         {
             InitializeComponent();
+
             welcome_text.Content = $"Witaj, {nickname}!";
+
             helper.Content = nickname;
             helper.Visibility = Visibility.Hidden;
+            //xxxxxxxxxxxxxx
             new_password.Visibility = Visibility.Hidden;
             new_password_text.Visibility = Visibility.Hidden;
             new_password_but.Visibility = Visibility.Hidden;
-
+            //xxxxxxxxxxxxxx
+            car_title.Visibility = Visibility.Hidden;
+            car_text1.Visibility = Visibility.Hidden;
+            car_text2.Visibility = Visibility.Hidden;
+            car_text3.Visibility = Visibility.Hidden;
+            car_text4.Visibility = Visibility.Hidden;
+            input1.Visibility = Visibility.Hidden;
+            input2.Visibility = Visibility.Hidden;
+            input3.Visibility = Visibility.Hidden;
+            input4.Visibility = Visibility.Hidden;
+            car_add_but.Visibility = Visibility.Hidden;
+            //xxxxxxxxxxxxxx
+            team_text1.Visibility = Visibility.Hidden;
+            team_text2.Visibility = Visibility.Hidden;
+            team_add_but.Visibility = Visibility.Hidden;
+            team_title.Visibility = Visibility.Hidden;
         }
 
         private void change_password_but_Click(object sender, RoutedEventArgs e)
@@ -96,6 +114,51 @@ namespace MyRace
             LoginWindow okno = new LoginWindow();
             okno.Show();
             this.Close();
+        }
+
+        private void car_but_Click(object sender, RoutedEventArgs e)
+        {
+            //xxxxxxxxxxxxxx
+            car_title.Visibility = Visibility.Visible;
+            car_text1.Visibility = Visibility.Visible;
+            car_text2.Visibility = Visibility.Visible;
+            car_text3.Visibility = Visibility.Visible;
+            car_text4.Visibility = Visibility.Visible;
+            input1.Visibility = Visibility.Visible;
+            input2.Visibility = Visibility.Visible;
+            input3.Visibility = Visibility.Visible;
+            input4.Visibility = Visibility.Visible;
+            car_add_but.Visibility = Visibility.Visible;
+            //xxxxxxxxxxxxxx
+            team_text1.Visibility = Visibility.Hidden;
+            team_text2.Visibility = Visibility.Hidden;
+            team_add_but.Visibility = Visibility.Hidden;
+            team_title.Visibility = Visibility.Hidden;
+        }
+
+        private void team_but_Click(object sender, RoutedEventArgs e)
+        {
+            //xxxxxxxxxxxxxx
+            car_title.Visibility = Visibility.Hidden;
+            car_text1.Visibility = Visibility.Hidden;
+            car_text2.Visibility = Visibility.Hidden;
+            car_text3.Visibility = Visibility.Hidden;
+            car_text4.Visibility = Visibility.Hidden;
+            input3.Visibility = Visibility.Hidden;
+            input4.Visibility = Visibility.Hidden;
+            car_add_but.Visibility = Visibility.Hidden;
+            //xxxxxxxxxxxxxx
+            input1.Visibility = Visibility.Visible;
+            input2.Visibility = Visibility.Visible;
+            team_text1.Visibility = Visibility.Visible;
+            team_text2.Visibility = Visibility.Visible;
+            team_add_but.Visibility = Visibility.Visible;
+            team_title.Visibility = Visibility.Visible;
+        }
+
+        private void team_add_but_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

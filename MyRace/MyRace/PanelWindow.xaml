@@ -52,16 +52,54 @@
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
-        <Button x:Name="team_but" FontFamily="Impact" FontSize="20px" Margin="64,53,75,10" Content="Dodaj zespół" Grid.Row="1">
+        <Button x:Name="team_but" FontFamily="Impact" FontSize="20px" Margin="64,53,75,10" Content="Dodaj zespół" Grid.Row="1" Click="team_but_Click">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
-        <Button x:Name="car_but" FontFamily="Impact" FontSize="16px" Margin="70,42,70,24" Content="Dodaj samochód" Grid.Row="2">
+        <Button x:Name="car_but" FontFamily="Impact" FontSize="16px" Margin="70,42,70,24" Content="Dodaj samochód" Grid.Row="2" Click="car_but_Click">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
+        <TextBox x:Name="input1" FontSize="15px" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="0,54,0,0" Grid.Column="1" Grid.Row="1">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="input2" FontSize="15px" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="0,96,0,0" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="input3" FontSize="15px" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="0,30,0,0" Grid.Column="1" Grid.Row="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="input4" FontSize="15px" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" Opacity="0.5" Margin="0,75,0,0" Grid.Column="1" Grid.Row="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="car_title" FontFamily="Impact" FontSize="18px" Content="Formularz dodawania samochodu" Grid.Column="1" Height="39" VerticalAlignment="Top" Margin="0,105,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="car_text1" FontFamily="Impact" FontSize="18px" Content="Marka" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,36,196,0"/>
+        <Label x:Name="car_text2" FontFamily="Impact" FontSize="18px" Content="Model" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,80,196,0" Grid.RowSpan="2"/>
+        <Label x:Name="car_text3" FontFamily="Impact" FontSize="18px" Content="Rok" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Margin="70,15,196,0"/>
+        <Label x:Name="car_text4" FontFamily="Impact" FontSize="18px" Content="Moc" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Margin="70,61,196,0"/>
+        <Button x:Name="car_add_but" FontFamily="Impact" FontSize="16px" Margin="96,5,96,73" Content="Dodaj" Grid.Row="3" Grid.Column="1">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="team_text1" FontFamily="Impact" FontSize="18px" Content="Nazwa" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,36,196,0"/>
+        <Label x:Name="team_text2" FontFamily="Impact" FontSize="18px" Content="Kraj" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,80,196,0" Grid.RowSpan="2"/>
+        <Button x:Name="team_add_but" FontFamily="Impact" FontSize="16px" Margin="96,24,96,55" Content="Dodaj" Grid.Row="2" Grid.Column="1" Click="team_add_but_Click">
+            <Button.Background>
+                <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="team_title" FontFamily="Impact" FontSize="18px" Content="Formularz dodawania zespołu" Grid.Column="1" Height="40" VerticalAlignment="Top" Margin="16,3,251,0" Grid.ColumnSpan="2" Grid.Row="1"/>
 
 
 
