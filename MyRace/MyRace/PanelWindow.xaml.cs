@@ -158,6 +158,60 @@ namespace MyRace
 
         private void team_add_but_Click(object sender, RoutedEventArgs e)
         {
+            if (input1.Text == string.Empty || input2.Text == string.Empty)
+            {
+                MessageBox.Show("Uzupełnij wszystkie dane i spróbuj ponownie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (input1.Text.Length > 30 || input2.Text.Length > 25)
+            {
+                MessageBox.Show("Nazwa drużyny jest za długa!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                string databaseFileName = "Baza.mdf";
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+                string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
+
+                string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
+                SqlConnection connection = new SqlConnection(conn);
+
+                connection.Open();
+
+                SqlCommand cmd1 = new SqlCommand("INSERT INTO Zespoly (Nazwa, Kraj) VALUES (@Nazwa, @Kraj)", connection);
+                cmd1.Parameters.AddWithValue("@Nazwa", input1.Text);
+                cmd1.Parameters.AddWithValue("@Kraj", input2.Text);
+                int a = cmd1.ExecuteNonQuery();
+
+                if (a == 1)
+                {
+                    List<int> team_id = new List<int>();
+                    SqlCommand cmd2 = new SqlCommand("SELECT IDzespol from Zespoly where Nazwa = @Nazwa", connection);
+                    cmd2.Parameters.AddWithValue("@Nazwa", input1.Text);
+                    SqlDataReader reader = cmd2.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        team_id.Add(reader.GetInt32(0));
+                    }
+                    reader.Close();
+
+                    SqlCommand cmd3 = new SqlCommand($"UPDATE Zawodnicy SET IDZespol = @TeamID WHERE login = @Login", connection);
+                    cmd3.Parameters.AddWithValue("@TeamID", team_id[0]);
+                    cmd3.Parameters.AddWithValue("@Login", helper.Content);
+                    int b = cmd3.ExecuteNonQuery();
+
+                    MessageBox.Show($"Pomyślnie założono drużynę: {input1.Text}!\nOd teraz do niej należysz.", "Sukces!");
+                    connection.Close();
+                }
+                else
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void car_add_but_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
