@@ -129,11 +129,13 @@ namespace MyRace
             input3.Visibility = Visibility.Visible;
             input4.Visibility = Visibility.Visible;
             car_add_but.Visibility = Visibility.Visible;
+            team_but.IsEnabled = true;
             //xxxxxxxxxxxxxx
             team_text1.Visibility = Visibility.Hidden;
             team_text2.Visibility = Visibility.Hidden;
             team_add_but.Visibility = Visibility.Hidden;
             team_title.Visibility = Visibility.Hidden;
+            car_but.IsEnabled = false;
         }
 
         private void team_but_Click(object sender, RoutedEventArgs e)
@@ -147,6 +149,7 @@ namespace MyRace
             input3.Visibility = Visibility.Hidden;
             input4.Visibility = Visibility.Hidden;
             car_add_but.Visibility = Visibility.Hidden;
+            team_but.IsEnabled = false;
             //xxxxxxxxxxxxxx
             input1.Visibility = Visibility.Visible;
             input2.Visibility = Visibility.Visible;
@@ -154,6 +157,7 @@ namespace MyRace
             team_text2.Visibility = Visibility.Visible;
             team_add_but.Visibility = Visibility.Visible;
             team_title.Visibility = Visibility.Visible;
+            car_but.IsEnabled = true;
         }
 
         private void team_add_but_Click(object sender, RoutedEventArgs e)

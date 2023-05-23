@@ -83,17 +83,17 @@
             </TextBox.Effect>
         </TextBox>
         <Label x:Name="car_title" FontFamily="Impact" FontSize="18px" Content="Formularz dodawania samochodu" Grid.Column="1" Height="39" VerticalAlignment="Top" Margin="0,105,0,0" Grid.RowSpan="2"/>
-        <Label x:Name="car_text1" FontFamily="Impact" FontSize="18px" Content="Marka" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,36,196,0"/>
-        <Label x:Name="car_text2" FontFamily="Impact" FontSize="18px" Content="Model" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,80,196,0" Grid.RowSpan="2"/>
-        <Label x:Name="car_text3" FontFamily="Impact" FontSize="18px" Content="Rok" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Margin="70,15,196,0"/>
-        <Label x:Name="car_text4" FontFamily="Impact" FontSize="18px" Content="Moc" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Margin="70,61,196,0"/>
+        <Label x:Name="car_text1" FontFamily="Impact" FontSize="18px" Content="Marka" Grid.Column="1" Height="30" VerticalAlignment="Top" Grid.Row="1" Margin="70,36,133,0"/>
+        <Label x:Name="car_text2" FontFamily="Impact" FontSize="18px" Content="Model" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Margin="70,80,133,0" Grid.RowSpan="2"/>
+        <Label x:Name="car_text3" FontFamily="Impact" FontSize="18px" Content="Rok" Grid.Column="1" Height="35" VerticalAlignment="Top" Grid.Row="2" Margin="70,15,148,0"/>
+        <Label x:Name="car_text4" FontFamily="Impact" FontSize="18px" Content="Moc" Grid.Column="1" Height="32" VerticalAlignment="Top" Grid.Row="2" Margin="70,61,148,0"/>
         <Button x:Name="car_add_but" FontFamily="Impact" FontSize="16px" Margin="96,5,96,73" Content="Dodaj" Grid.Row="3" Grid.Column="1" Click="car_add_but_Click">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
             </Button.Background>
         </Button>
-        <Label x:Name="team_text1" FontFamily="Impact" FontSize="18px" Content="Nazwa" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,36,196,0"/>
-        <Label x:Name="team_text2" FontFamily="Impact" FontSize="18px" Content="Kraj" Grid.Column="1" Height="39" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Margin="70,80,196,0" Grid.RowSpan="2"/>
+        <Label x:Name="team_text1" FontFamily="Impact" FontSize="18px" Content="Nazwa" Grid.Column="1" Height="30" VerticalAlignment="Top" Grid.Row="1" Margin="70,36,133,0"/>
+        <Label x:Name="team_text2" FontFamily="Impact" FontSize="18px" Content="Kraj" Grid.Column="1" Height="28" VerticalAlignment="Top" Grid.Row="1" Margin="70,80,140,0"/>
         <Button x:Name="team_add_but" FontFamily="Impact" FontSize="16px" Margin="96,24,96,55" Content="Dodaj" Grid.Row="2" Grid.Column="1" Click="team_add_but_Click">
             <Button.Background>
                 <SolidColorBrush Color="DarkGray" Opacity="0.5"/>
