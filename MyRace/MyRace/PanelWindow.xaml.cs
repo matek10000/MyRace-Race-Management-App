@@ -209,6 +209,7 @@ namespace MyRace
                 }
                 else
                 {
+                    MessageBox.Show($"Nie udało się utworzyć drużyny.. Spróbuj ponownie!", "Błąd");
                     connection.Close();
                 }
             }
