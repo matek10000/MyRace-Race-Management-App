@@ -26,3 +26,6 @@ Zakończenie projektu: xx.xx.xxxxr.
 
 #v0.8
 >Wprowadzenie dużych zmian front-endowych w tym zmiana całego tła. Poprawienie komunikatów podczas zapisu i logowania. Wprowadzenie widełek do zapisu.
+
+#v0.9
+>Utworzenie panelu zalogowanego użytkownika. Dodanie możliwości zmiany hasła, wylogowania się, dodania samochodu oraz dodania do drużyny. Poprawki w designie i w funkcjonalności całego programu. 
