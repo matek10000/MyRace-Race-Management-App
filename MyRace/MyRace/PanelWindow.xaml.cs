@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
@@ -216,8 +217,60 @@ namespace MyRace
         }
 
         private void car_add_but_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+            if (input1.Text == string.Empty || input2.Text == string.Empty || input3.Text == string.Empty || input4.Text == string.Empty)
+            {
+                MessageBox.Show("Uzupełnij wszystkie dane i spróbuj ponownie!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (input1.Text.Length > 25 || input2.Text.Length > 25 || input3.Text.Length > 4 || input4.Text.Length > 4)
+            {
+                MessageBox.Show("Sprawdź czy wszystkie dane zostały podane prawidłowo!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                string databaseFileName = "Baza.mdf";
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
+                string databaseFilePath = Path.Combine(projectDirectory, databaseFileName);
 
+                string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={databaseFilePath};Integrated Security=True;Connect Timeout=30;";
+                SqlConnection connection = new SqlConnection(conn);
+
+                connection.Open();
+
+                SqlCommand cmd1 = new SqlCommand("INSERT INTO Samochody (Marka, Model, rok_produkcji, moc) VALUES (@Marka, @Model, @Rok, @Moc)", connection);
+                cmd1.Parameters.AddWithValue("@Marka", input1.Text);
+                cmd1.Parameters.AddWithValue("@Model", input2.Text);
+                cmd1.Parameters.AddWithValue("@Rok", input3.Text);
+                cmd1.Parameters.AddWithValue("@Moc", input4.Text);
+                int a = cmd1.ExecuteNonQuery();
+
+                if (a == 1)
+                {
+                    List<int> car_id = new List<int>();
+                    SqlCommand cmd2 = new SqlCommand("SELECT IDsamochod from Samochody where Model = @Model", connection);
+                    cmd2.Parameters.AddWithValue("@Model", input2.Text);
+                    SqlDataReader reader = cmd2.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        car_id.Add(reader.GetInt32(0));
+                    }
+                    reader.Close();
+
+                    SqlCommand cmd3 = new SqlCommand($"UPDATE Zawodnicy SET IDsamochod = @CarID WHERE login = @Login", connection);
+                    cmd3.Parameters.AddWithValue("@CarID", car_id[0]);
+                    cmd3.Parameters.AddWithValue("@Login", helper.Content);
+                    int b = cmd3.ExecuteNonQuery();
+
+                    MessageBox.Show($"Pomyślnie przypisano Ci samochód: {input1.Text} {input2.Text} z {input3.Text} roku o mocy: {input4.Text}KM!", "Sukces!");
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show($"Nie udało się dodać samochodu.. Spróbuj ponownie!", "Błąd");
+                    connection.Close();
+                }
+            }
         }
     }
 }
