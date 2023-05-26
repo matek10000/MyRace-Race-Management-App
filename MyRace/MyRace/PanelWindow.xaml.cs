@@ -131,6 +131,7 @@ namespace MyRace
             input4.Visibility = Visibility.Visible;
             car_add_but.Visibility = Visibility.Visible;
             team_but.IsEnabled = true;
+            car_add_but.IsEnabled = true;
             //xxxxxxxxxxxxxx
             team_text1.Visibility = Visibility.Hidden;
             team_text2.Visibility = Visibility.Hidden;
@@ -159,6 +160,7 @@ namespace MyRace
             team_add_but.Visibility = Visibility.Visible;
             team_title.Visibility = Visibility.Visible;
             car_but.IsEnabled = true;
+            team_add_but.IsEnabled = true;
         }
 
         private void team_add_but_Click(object sender, RoutedEventArgs e)
@@ -206,6 +208,7 @@ namespace MyRace
                     int b = cmd3.ExecuteNonQuery();
 
                     MessageBox.Show($"Pomyślnie założono drużynę: {input1.Text}!\nOd teraz do niej należysz.", "Sukces!");
+                    team_add_but.IsEnabled = false;
                     connection.Close();
                 }
                 else
@@ -263,6 +266,7 @@ namespace MyRace
                     int b = cmd3.ExecuteNonQuery();
 
                     MessageBox.Show($"Pomyślnie przypisano Ci samochód: {input1.Text} {input2.Text} z {input3.Text} roku o mocy: {input4.Text}KM!", "Sukces!");
+                    car_add_but.IsEnabled = false;
                     connection.Close();
                 }
                 else
