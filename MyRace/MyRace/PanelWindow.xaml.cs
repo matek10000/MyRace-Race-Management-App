@@ -125,6 +125,10 @@ namespace MyRace
             car_text2.Visibility = Visibility.Visible;
             car_text3.Visibility = Visibility.Visible;
             car_text4.Visibility = Visibility.Visible;
+            input1.Text = "";
+            input2.Text = "";
+            input3.Text = "";
+            input4.Text = "";
             input1.Visibility = Visibility.Visible;
             input2.Visibility = Visibility.Visible;
             input3.Visibility = Visibility.Visible;
@@ -148,6 +152,10 @@ namespace MyRace
             car_text2.Visibility = Visibility.Hidden;
             car_text3.Visibility = Visibility.Hidden;
             car_text4.Visibility = Visibility.Hidden;
+            input1.Text = "";
+            input2.Text = "";
+            input3.Text = "";
+            input4.Text = "";
             input3.Visibility = Visibility.Hidden;
             input4.Visibility = Visibility.Hidden;
             car_add_but.Visibility = Visibility.Hidden;
