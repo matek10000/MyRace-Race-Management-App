@@ -30,14 +30,14 @@ namespace MyRace
         {
             InitializeComponent();
         }
-
+        // Przycisk powrotu do głównego okna
         private void back_but_Click(object sender, RoutedEventArgs e)
         {
             MainWindow okno = new MainWindow();
             okno.Show();
             this.Close();
         }
-
+        // Przycisk sprawdzający wpisane dane, łączący się z bazą oraz powodujący utworzenie konta dla zawodnika 
         private void sign_but_Click(object sender, RoutedEventArgs e)
         {
 

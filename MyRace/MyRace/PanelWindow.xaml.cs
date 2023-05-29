@@ -28,7 +28,9 @@ namespace MyRace
         {
             InitializeComponent();
 
-            welcome_text.Content = $"Witaj, {nickname}!";
+            welcome_text.Content = $"Witaj, {nickname}!"; // Użycie przeniesionej zmiennej w celu wyświetlenie spersonalizowanego tekstu
+
+            // Ustalenie domyślnych wartości dla widoczności oraz funkcjonalności pojedyńczych obiektów
 
             helper.Content = nickname;
             helper.Visibility = Visibility.Hidden;
@@ -53,7 +55,7 @@ namespace MyRace
             team_add_but.Visibility = Visibility.Hidden;
             team_title.Visibility = Visibility.Hidden;
         }
-
+        // Przycisk wywołujący pojawienie się formularza dla zmiany hasła
         private void change_password_but_Click(object sender, RoutedEventArgs e)
         {
             new_password.Visibility = Visibility.Visible;
@@ -61,7 +63,7 @@ namespace MyRace
             new_password_but.Visibility = Visibility.Visible;
             change_password_but.IsEnabled = false;
         }
-
+        // Przycisk sprawdzający dane hasło pod względem prawidłowości oraz przypisuje je do użytkownika w bazie danych
         private void new_password_but_Click(object sender, RoutedEventArgs e)
         {
             if (new_password.Text.Length > 10)
@@ -108,7 +110,7 @@ namespace MyRace
                 }
             }
         }
-
+        // Przycisk powodujący przeniesienie ponownie do okna logowania
         private void logout_but_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Pomyślnie wylogowano!", "Sukces!", MessageBoxButton.OK,MessageBoxImage.Information);
@@ -116,7 +118,7 @@ namespace MyRace
             okno.Show();
             this.Close();
         }
-
+        // Przycisk ustalający widoczność pojedyńczych elementów
         private void car_but_Click(object sender, RoutedEventArgs e)
         {
             //xxxxxxxxxxxxxx
@@ -144,6 +146,7 @@ namespace MyRace
             car_but.IsEnabled = false;
         }
 
+        // Przycisk ustalający widoczność pojedyńczych elementów
         private void team_but_Click(object sender, RoutedEventArgs e)
         {
             //xxxxxxxxxxxxxx
@@ -170,7 +173,7 @@ namespace MyRace
             car_but.IsEnabled = true;
             team_add_but.IsEnabled = true;
         }
-
+        // Przycisk sprawdzający poprawność danych i dodający je jako nowe rekordy do bazy, dodając przy tym relację pomiędzy zawodnikiem, a drużyną
         private void team_add_but_Click(object sender, RoutedEventArgs e)
         {
             if (input1.Text == string.Empty || input2.Text == string.Empty)
@@ -226,7 +229,7 @@ namespace MyRace
                 }
             }
         }
-
+        // Przycisk sprawdzający poprawność danych i dodający je jako nowe rekordy do bazy, dodając przy tym relację pomiędzy zawodnikiem, a samochodem
         private void car_add_but_Click(object sender, RoutedEventArgs e)
         { 
             if (input1.Text == string.Empty || input2.Text == string.Empty || input3.Text == string.Empty || input4.Text == string.Empty)

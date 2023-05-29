@@ -126,7 +126,7 @@ namespace MyRace
             okno.Show();
             this.Close();
         }
-
+        // Przeniesienie na nowe okno "Logowanie się"
         private void login_but_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow okno = new LoginWindow();

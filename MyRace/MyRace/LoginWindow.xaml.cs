@@ -30,7 +30,7 @@ namespace MyRace
         {
             InitializeComponent();
         }
-
+        // Przycisk sprawdzający wpisane dane oraz powodujący połaczenie się z bazą, a następnie przeniesieniem użytkownika do panelu
         private void login_but_Click(object sender, RoutedEventArgs e)
         {
             string nickname;
@@ -44,7 +44,7 @@ namespace MyRace
 
             connection.Open();
 
-
+                // Sprawdzanie poprawności wpisanych danych
                 SqlDataAdapter cmd = new SqlDataAdapter($"SELECT * FROM Zawodnicy WHERE login = '{login.Text}' AND haslo = '{haslo.Password}'", connection);
 
                 DataTable dataTable= new DataTable();
@@ -54,7 +54,7 @@ namespace MyRace
                 {
                     connection.Close();
                     nickname = login.Text;
-                    PanelWindow okno = new PanelWindow(nickname);
+                    PanelWindow okno = new PanelWindow(nickname); // Wyciągnięcie nazwy użytkownika do następnego okna
                     okno.Show();
                     this.Close();
             }
@@ -64,7 +64,7 @@ namespace MyRace
                     connection.Close();
                 }
         }
-
+        // Przycisk powrotu na stronę główną
         private void back_but_Click(object sender, RoutedEventArgs e)
         {
             MainWindow okno = new MainWindow();
