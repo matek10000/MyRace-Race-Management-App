@@ -1,7 +1,7 @@
 # MyRace - Aplikacja do zapisywania się do systemu wyścigów w Krakowie
 
 Rozpoczęcie projektu: 11.05.2023r.
-Zakończenie projektu: xx.xx.xxxxr.
+Zakończenie projektu: 18.10.2023r.
 
 #v0.1
 >Stworzenie projektu oraz połączenie z bazą danych. Zaprojektowanie konceptu okna początkowego
